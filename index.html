@@ -12,19 +12,168 @@
 
     <title>Mayerly Piloso | Portafolio</title>
 
+    <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
     <header class="site-header">
-        <!-- La navegación se desarrollará en la siguiente etapa. -->
+        <nav class="navbar" aria-label="Navegación principal">
+            <a class="navbar__brand" href="#inicio" aria-label="Ir al inicio">
+                MP
+            </a>
+
+            <ul class="navbar__menu" id="navbar-menu">
+                <li><a class="navbar__link" href="#inicio">Inicio</a></li>
+                <li><a class="navbar__link" href="#sobre-mi">Sobre mí</a></li>
+                <li><a class="navbar__link" href="#habilidades">Habilidades</a></li>
+                <li><a class="navbar__link" href="#proyectos">Proyectos</a></li>
+                <li><a class="navbar__link" href="#contacto">Contacto</a></li>
+            </ul>
+
+            <div class="navbar__actions">
+                <button
+                    class="theme-toggle"
+                    type="button"
+                    aria-label="Cambiar tema"
+                >
+                    <span aria-hidden="true">◐</span>
+                </button>
+
+                <button
+                    class="menu-toggle"
+                    type="button"
+                    aria-label="Abrir menú de navegación"
+                    aria-expanded="false"
+                    aria-controls="navbar-menu"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
     </header>
 
     <main>
-        <!-- Hero / Inicio -->
+        <section class="hero" id="inicio">
+            <div class="hero__content">
 
-        <!-- Sobre mí -->
+                <p class="hero__eyebrow">Hola, soy</p>
+
+                <h1 class="hero__title">
+                    Mayerly
+                    <span>Piloso.</span>
+                </h1>
+
+                <p class="hero__role">
+                    Estudiante de Ingeniería en Software
+                </p>
+
+                <p class="hero__description">
+                    Me interesa el desarrollo web, el análisis de datos y la
+                    creación de soluciones tecnológicas que aporten valor a
+                    problemas reales.
+                </p>
+
+                <div class="hero__actions">
+                    <a class="button button--primary" href="#proyectos">
+                        Ver mis proyectos
+                    </a>
+
+                    <a class="button button--secondary" href="#sobre-mi">
+                        Conocer más
+                    </a>
+                </div>
+
+            </div>
+
+            <figure class="hero__visual">
+                <img
+                    class="hero__image"
+                    src="assets/images/profile/mayerly-piloso.png"
+                    alt="Retrato de Mayerly Piloso"
+                >
+
+                <figcaption class="sr-only">
+                    Fotografía de Mayerly Piloso
+                </figcaption>
+            </figure>
+
+            <a
+                class="hero__scroll"
+                href="#sobre-mi"
+                aria-label="Continuar hacia la sección Sobre mí"
+            >
+                <span aria-hidden="true">↓</span>
+                <span>Scroll para explorar</span>
+            </a>
+        </section>
+
+        <section class="about" id="sobre-mi">
+            <div class="about__container">
+
+                <div class="about__visual" aria-hidden="true">
+                    <p class="about__quote">
+                        Ideas, datos y tecnología.
+                    </p>
+
+                    <span class="about__number">01</span>
+                </div>
+
+                <div class="about__content">
+
+                    <header class="section-header">
+                        <p class="section-header__eyebrow">Sobre mí</p>
+
+                        <h2 class="section-header__title">
+                            Aprendiendo, creando
+                            <span>y evolucionando.</span>
+                        </h2>
+                    </header>
+
+                    <p class="about__description">
+                        Soy estudiante de Ingeniería en Software en la Universidad
+                        Estatal de Milagro. Me interesa desarrollar soluciones
+                        tecnológicas que combinen creatividad, análisis y una
+                        experiencia útil para las personas.
+                    </p>
+
+                    <p class="about__description">
+                        Actualmente continúo fortaleciendo mis conocimientos en
+                        desarrollo web y análisis de datos, mientras exploro nuevas
+                        herramientas y participo en proyectos académicos que me
+                        permiten aplicar lo aprendido a problemas reales.
+                    </p>
+
+                    <div class="about__details">
+
+                        <article class="about__detail">
+                            <span class="about__detail-number">01</span>
+
+                            <div>
+                                <h3>Formación</h3>
+                                <p>Ingeniería en Software</p>
+                                <span>Universidad Estatal de Milagro</span>
+                            </div>
+                        </article>
+
+                        <article class="about__detail">
+                            <span class="about__detail-number">02</span>
+
+                            <div>
+                                <h3>Intereses</h3>
+                                <p>Desarrollo web · Datos · Tecnología</p>
+                                <span>Aprendizaje continuo</span>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
         <!-- Skills -->
 
