@@ -1,6 +1,4 @@
-/* ==============================
-   SKILLS CAROUSEL
-   ============================== */
+
 
 const skillsTrack = document.querySelector(".skills__track");
 const skillCards = document.querySelectorAll(".skill-card");
