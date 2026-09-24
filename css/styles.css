@@ -1329,8 +1329,13 @@ ul {
 }
 
 .contact__content {
-    width: min(100%, 1040px);
-    margin: 3.5rem auto 0;
+    width: min(100%, var(--container-width));
+    margin: var(--space-xl) auto 0;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.8fr);
+    gap: var(--space-2xl);
+    align-items: start;
 }
 
 .contact__eyebrow {
@@ -1410,9 +1415,48 @@ ul {
     color: var(--color-primary);
     transform: translate(0.25rem, -0.25rem);
 }
+
+
+.contact__info {
+    min-width: 0;
+}
+
+.contact-form {
+    padding: var(--space-lg);
+
+    display: grid;
+    gap: var(--space-lg);
+
+    background-color: var(--color-surface);
+
+    border: var(--border-width) solid var(--color-border);
+}
+
+.contact-form .button {
+    justify-self: start;
+
+    cursor: pointer;
+}
+
+.form-field__error {
+    min-height: 1.2rem;
+
+    color: var(--color-primary);
+
+    font-size: var(--font-size-sm);
+}
+
+.contact-form__status {
+    min-height: 1.5rem;
+    margin: 0;
+
+    color: var(--color-text-muted);
+
+    font-size: var(--font-size-sm);
+}
 /* Responsive */
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
 
     .projects {
         padding: 6rem 1.5rem;
@@ -1460,26 +1504,6 @@ ul {
 
     .component-showcase {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-
-    .design-system__colors {
-        grid-template-columns: 1fr;
-    }
-
-    .spacing-item {
-        grid-template-columns: 3rem minmax(0, 1fr) 4rem;
-        gap: var(--space-md);
-    }
-
-    .component-example__content {
-        align-items: stretch;
-    }
-
-    .component-example__content .button {
-        width: 100%;
     }
 }
 
@@ -1642,6 +1666,56 @@ ul {
 
     .skills__track {
         grid-auto-columns: minmax(16rem, 85%);
+    }
+
+    .contact__content {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    }
+
+    .contact-form {
+        padding: var(--space-md);
+    }
+
+    .contact-form .button {
+        width: 100%;
+    }
+    .contact__link {
+    grid-template-columns: 1fr auto;
+    gap: var(--space-sm);
+    }
+
+    .contact__link-label {
+        grid-column: 1 / -1;
+    }
+
+    .contact__link-value {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .contact__link-arrow {
+        align-self: end;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .design-system__colors {
+        grid-template-columns: 1fr;
+    }
+
+    .spacing-item {
+        grid-template-columns: 3rem minmax(0, 1fr) 4rem;
+        gap: var(--space-md);
+    }
+
+    .component-example__content {
+        align-items: stretch;
+    }
+
+    .component-example__content .button {
+        width: 100%;
     }
 }
 
