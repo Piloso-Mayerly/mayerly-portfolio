@@ -38,3 +38,28 @@ if (
         updateSkillsCarousel();
     });
 }
+
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navbarMenu = document.querySelector(".navbar__menu");
+const navbarLinks = document.querySelectorAll(".navbar__link");
+
+if (menuToggle && navbarMenu) {
+    const closeMenu = () => {
+        navbarMenu.classList.remove("navbar__menu--open");
+        menuToggle.classList.remove("menu-toggle--open");
+        menuToggle.setAttribute("aria-expanded", "false");
+    };
+
+    menuToggle.addEventListener("click", () => {
+        const isOpen = navbarMenu.classList.toggle("navbar__menu--open");
+
+        menuToggle.classList.toggle("menu-toggle--open", isOpen);
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navbarLinks.forEach((link) => {
+        link.addEventListener("click", closeMenu);
+    });
+}
+
