@@ -63,3 +63,117 @@ if (menuToggle && navbarMenu) {
     });
 }
 
+
+
+
+
+const contactForm = document.querySelector("#contact-form");
+const nameInput = document.querySelector("#contact-name");
+const emailInput = document.querySelector("#contact-email");
+const messageInput = document.querySelector("#contact-message");
+
+const nameError = document.querySelector("#name-error");
+const emailError = document.querySelector("#email-error");
+const messageError = document.querySelector("#message-error");
+
+const formStatus = document.querySelector("#form-status");
+
+if (
+    contactForm &&
+    nameInput &&
+    emailInput &&
+    messageInput &&
+    nameError &&
+    emailError &&
+    messageError &&
+    formStatus
+) {
+    const showError = (input, errorElement, message) => {
+        errorElement.textContent = message;
+        input.setAttribute("aria-invalid", "true");
+    };
+
+    const clearError = (input, errorElement) => {
+        errorElement.textContent = "";
+        input.removeAttribute("aria-invalid");
+    };
+
+    const validateName = () => {
+        const name = nameInput.value.trim();
+
+        if (name.length < 2) {
+            showError(
+                nameInput,
+                nameError,
+                "Ingresa un nombre válido."
+            );
+
+            return false;
+        }
+
+        clearError(nameInput, nameError);
+        return true;
+    };
+
+    const validateEmail = () => {
+        const email = emailInput.value.trim();
+
+        if (email === "") {
+            showError(
+                emailInput,
+                emailError,
+                "Ingresa tu correo electrónico."
+            );
+
+            return false;
+        }
+
+        if (!emailInput.validity.valid) {
+            showError(
+                emailInput,
+                emailError,
+                "Ingresa un correo electrónico válido."
+            );
+
+            return false;
+        }
+
+        clearError(emailInput, emailError);
+        return true;
+    };
+
+    const validateMessage = () => {
+        const message = messageInput.value.trim();
+
+        if (message.length < 10) {
+            showError(
+                messageInput,
+                messageError,
+                "El mensaje debe tener al menos 10 caracteres."
+            );
+
+            return false;
+        }
+
+        clearError(messageInput, messageError);
+        return true;
+    };
+
+    contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const isNameValid = validateName();
+        const isEmailValid = validateEmail();
+        const isMessageValid = validateMessage();
+
+        if (isNameValid && isEmailValid && isMessageValid) {
+            formStatus.textContent =
+                "Formulario validado correctamente.";
+
+            return;
+        }
+
+        formStatus.textContent =
+            "Revisa los campos indicados antes de enviar.";
+    });
+}
