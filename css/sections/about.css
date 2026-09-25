@@ -1,0 +1,114 @@
+
+
+.about__content {
+    max-width: 50rem;
+    margin-top: var(--space-xl);
+    margin-left: var(--section-indent);
+
+    display: grid;
+    grid-template-columns: minmax(15rem, 0.8fr) minmax(0, 1.2fr);
+    gap: var(--space-xl);
+}
+
+.about__lead {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.about__text p {
+    color: var(--color-text-muted);
+}
+
+.about__text p + p {
+    margin-top: var(--space-md);
+}
+
+/* Datos profesionales (lista de definición: etiqueta + valor) */
+
+.about__details {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-lg);
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    border-top: var(--border);
+}
+
+.about__detail {
+    min-width: 0;
+    padding-inline: var(--space-lg);
+}
+
+.about__detail:first-child {
+    padding-left: 0;
+}
+
+.about__detail:last-child {
+    padding-right: 0;
+}
+
+.about__detail + .about__detail {
+    border-left: var(--border);
+}
+
+.about__detail dt {
+    margin-bottom: var(--space-sm);
+
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-label);
+
+    color: var(--color-primary);
+}
+
+.about__detail dd {
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+
+    color: var(--color-text-muted);
+}
+
+.about__detail dd:first-of-type {
+    margin-bottom: var(--space-xs);
+
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    line-height: 1.3;
+
+    color: var(--color-text);
+}
+
+
+@media (max-width: 1024px) {
+    .about__content {
+        margin-left: 0;
+
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    .about__text {
+        max-width: 42rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .about__details {
+        margin-top: var(--space-xl);
+
+        grid-template-columns: 1fr;
+    }
+
+    .about__detail {
+        padding: var(--space-lg) 0;
+    }
+
+    .about__detail + .about__detail {
+        border-left: 0;
+        border-top: var(--border);
+    }
+}

@@ -1,0 +1,77 @@
+
+
+.button {
+    min-height: 3rem;
+    padding: 0.8rem 1.4rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: var(--border-width) solid transparent;
+    border-radius: var(--radius-sm);
+
+    font-weight: 700;
+    cursor: pointer;
+
+    transition:
+        transform var(--transition-fast),
+        background-color var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button--primary {
+    color: var(--color-on-primary);
+    background-color: var(--color-primary);
+}
+
+.button--primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.button--secondary {
+    border-color: var(--color-border);
+}
+
+.button--secondary:hover {
+    border-color: var(--color-text-muted);
+}
+
+/* Botón circular con un símbolo (carrusel, cambio de tema) */
+
+.icon-button {
+    width: 3rem;
+    height: 3rem;
+
+    display: grid;
+    place-items: center;
+
+    border: var(--border);
+    border-radius: var(--radius-full);
+
+    background: transparent;
+    color: var(--color-text);
+
+    font-size: var(--font-size-lg);
+    cursor: pointer;
+
+    transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.icon-button:hover {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+}
+
+.icon-button:active {
+    transform: scale(0.92);
+}

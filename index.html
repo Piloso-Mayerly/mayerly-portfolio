@@ -6,23 +6,27 @@
 
     <meta
         name="description"
-        content="Portafolio profesional de Mayerly Piloso, estudiante de Ingeniería en Software."
+        content="Portafolio profesional de Mayerly Piloso Muñoz, estudiante de Ingeniería en Software."
     >
-    <meta name="author" content="Mayerly Piloso">
+    <meta name="author" content="Mayerly Piloso Muñoz">
 
     <title>Mayerly Piloso | Portafolio</title>
 
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link
+        rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23050505'/%3E%3Ctext x='32' y='42' font-size='28' font-family='Arial' font-weight='800' fill='%23ff1f2d' text-anchor='middle'%3EMP%3C/text%3E%3C/svg%3E"
+    >
+
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
     <header class="site-header">
-        <nav class="navbar" aria-label="Navegación principal">
-            <a class="navbar__brand" href="#inicio" aria-label="Ir al inicio">
-                MP
-            </a>
+        <nav class="navbar container" aria-label="Navegación principal">
+            <a class="navbar__brand" href="#inicio" aria-label="Ir al inicio">MP</a>
 
             <ul class="navbar__menu" id="navbar-menu">
                 <li><a class="navbar__link" href="#inicio">Inicio</a></li>
@@ -34,8 +38,6 @@
             </ul>
 
             <div class="navbar__actions">
-    
-
                 <button
                     class="menu-toggle"
                     type="button"
@@ -51,20 +53,19 @@
         </nav>
     </header>
 
-    <main>
-        <section class="hero" id="inicio">
-            <div class="hero__content">
+    <main id="contenido">
 
+   
+        <section class="hero container" id="inicio" aria-labelledby="hero-title">
+            <div class="hero__content">
                 <p class="hero__eyebrow">Hola, soy</p>
 
-                <h1 class="hero__title">
+                <h1 class="hero__title" id="hero-title">
                     Mayerly
-                    <span>Piloso.</span>
+                    <span>Piloso</span>
                 </h1>
 
-                <p class="hero__role">
-                    Estudiante de Ingeniería en Software
-                </p>
+                <p class="hero__role">Estudiante de Ingeniería en Software</p>
 
                 <p class="hero__description">
                     Me interesa el desarrollo web, el análisis de datos y la
@@ -73,15 +74,9 @@
                 </p>
 
                 <div class="hero__actions">
-                    <a class="button button--primary" href="#proyectos">
-                        Ver mis proyectos
-                    </a>
-
-                    <a class="button button--secondary" href="#sobre-mi">
-                        Conocer más
-                    </a>
+                    <a class="button button--primary" href="#proyectos">Ver mis proyectos</a>
+                    <a class="button button--secondary" href="#sobre-mi">Conocer más</a>
                 </div>
-
             </div>
 
             <figure class="hero__visual">
@@ -90,10 +85,6 @@
                     src="assets/images/profile/mayerly-piloso.png"
                     alt="Retrato de Mayerly Piloso"
                 >
-
-                <figcaption class="sr-only">
-                    Fotografía de Mayerly Piloso
-                </figcaption>
             </figure>
 
             <a
@@ -101,28 +92,25 @@
                 href="#sobre-mi"
                 aria-label="Continuar hacia la sección Sobre mí"
             >
-                <span aria-hidden="true">↓</span>
+                <span class="hero__scroll-icon" aria-hidden="true">↓</span>
                 <span>Scroll para explorar</span>
             </a>
         </section>
 
-        <section class="about" id="sobre-mi">
-            <div class="about__container">
+       
+        <section class="about section" id="sobre-mi" aria-labelledby="about-title">
+            <div class="container">
 
                 <header class="section-header">
-                    <p class="section-header__eyebrow">
-                        <span>01</span>
-                        Sobre mí
-                    </p>
+                    <p class="section-header__eyebrow"><span>01</span> Sobre mí</p>
 
-                    <h2 class="section-header__title">
+                    <h2 class="section-header__title" id="about-title">
                         Aprendiendo, creando
                         <span>y evolucionando.</span>
                     </h2>
                 </header>
 
                 <div class="about__content">
-
                     <p class="about__lead">
                         Estudiante de Ingeniería en Software con interés en
                         desarrollo web y análisis de datos.
@@ -141,432 +129,435 @@
                             cada vez mejor estructuradas y útiles.
                         </p>
                     </div>
-
                 </div>
 
-                <div class="about__details">
+                <dl class="about__details">
+                    <div class="about__detail">
+                        <dt>Formación</dt>
+                        <dd>Ingeniería en Software</dd>
+                        <dd>Universidad Estatal de Milagro</dd>
+                    </div>
 
-                    <article class="about__detail">
-                        <p class="about__detail-label">Formación</p>
-                        <h3>Ingeniería en Software</h3>
-                        <p>Universidad Estatal de Milagro</p>
-                    </article>
+                    <div class="about__detail">
+                        <dt>Enfoque</dt>
+                        <dd>Web · Datos · Tecnología</dd>
+                        <dd>Desarrollo y aprendizaje continuo</dd>
+                    </div>
 
-                    <article class="about__detail">
-                        <p class="about__detail-label">Enfoque</p>
-                        <h3>Web · Datos · Tecnología</h3>
-                        <p>Desarrollo y aprendizaje continuo</p>
-                    </article>
-
-                    <article class="about__detail">
-                        <p class="about__detail-label">Actualmente</p>
-                        <h3>8.º semestre</h3>
-                        <p>Formación universitaria</p>
-                    </article>
-
-                </div>
+                    <div class="about__detail">
+                        <dt>Actualmente</dt>
+                        <dd>8.º semestre</dd>
+                        <dd>Formación universitaria</dd>
+                    </div>
+                </dl>
 
             </div>
         </section>
 
-        <section class="skills" id="habilidades">
-            <div class="skills__container">
+
+        <section class="skills section" id="habilidades" aria-labelledby="skills-title">
+            <div class="container">
 
                 <header class="section-header">
-                    <p class="section-header__eyebrow">
-                        <span>02</span>
-                        Habilidades
-                    </p>
+                    <p class="section-header__eyebrow"><span>02</span> Habilidades</p>
 
-                    <h2 class="section-header__title">
+                    <h2 class="section-header__title" id="skills-title">
                         Tecnologías que forman
                         <span>parte de mi camino.</span>
                     </h2>
                 </header>
 
-                <div class="skills__intro">
-                    <p>
-                        Herramientas y tecnologías que utilizo en proyectos
-                        académicos y personales, mientras continúo fortaleciendo
-                        mis conocimientos en desarrollo web y análisis de datos.
-                    </p>
-                </div>
+                <p class="section-intro">
+                    Herramientas y tecnologías que utilizo en proyectos
+                    académicos y personales, mientras continúo fortaleciendo
+                    mis conocimientos en desarrollo web y análisis de datos.
+                </p>
 
                 <div class="skills__controls">
                     <p class="skills__counter">
-                        <span>01</span>
-                        / 13
+                        <span class="skills__current">01</span> /
+                        <span class="skills__total">14</span>
                     </p>
 
                     <div class="skills__buttons">
                         <button
-                            class="skills__button skills__button--prev"
+                            class="icon-button skills__button--prev"
                             type="button"
                             aria-label="Ver habilidades anteriores"
-                        >
-                            ←
-                        </button>
+                        >←</button>
 
                         <button
-                            class="skills__button skills__button--next"
+                            class="icon-button skills__button--next"
                             type="button"
                             aria-label="Ver siguientes habilidades"
-                        >
-                            →
-                        </button>
+                        >→</button>
                     </div>
                 </div>
 
-                <div class="skills__track">
-
-                    <article class="skill-card">
-                        <span class="skill-card__number">01</span>
-                        <p class="skill-card__category">Desarrollo web</p>
+                <ul
+                    class="skills__track"
+                    role="list"
+                    tabindex="0"
+                    aria-label="Carrusel de habilidades"
+                >
+                    <li class="skill-card">
+                        <span class="skill-card__number" aria-hidden="true">01</span>
+                        <p class="skill-card__category">Frontend</p>
                         <h3 class="skill-card__title">HTML</h3>
                         <p class="skill-card__level">Intermedio</p>
-                    </article>
+                    </li>
 
-                    <article class="skill-card">
-                        <span class="skill-card__number">02</span>
-                        <p class="skill-card__category">Desarrollo web</p>
+                    <li class="skill-card">
+                        <span class="skill-card__number" aria-hidden="true">02</span>
+                        <p class="skill-card__category">Frontend</p>
                         <h3 class="skill-card__title">CSS</h3>
                         <p class="skill-card__level">Intermedio</p>
-                    </article>
+                    </li>
 
-                    <article class="skill-card">
-                        <span class="skill-card__number">03</span>
-                        <p class="skill-card__category">Desarrollo web</p>
+                    <li class="skill-card">
+                        <span class="skill-card__number" aria-hidden="true">03</span>
+                        <p class="skill-card__category">Frontend</p>
                         <h3 class="skill-card__title">JavaScript</h3>
                         <p class="skill-card__level">En aprendizaje</p>
-                    </article>
+                    </li>
 
-                    <article class="skill-card">
-                        <span class="skill-card__number">04</span>
+                    <li class="skill-card">
+                        <span class="skill-card__number" aria-hidden="true">04</span>
                         <p class="skill-card__category">Frontend</p>
                         <h3 class="skill-card__title">React</h3>
                         <p class="skill-card__level">En aprendizaje</p>
-                    </article>
+                    </li>
 
-                    <article class="skill-card">
-                        <span class="skill-card__number">05</span>
-                        <p class="skill-card__category">Programación</p>
+                    <li class="skill-card">
+                        <span class="skill-card__number" aria-hidden="true">05</span>
+                        <p class="skill-card__category">Backend</p>
                         <h3 class="skill-card__title">Python</h3>
                         <p class="skill-card__level">Intermedio</p>
-                    </article>
+                    </li>
 
-                    <article class="skill-card">
-                        <span class="skill-card__number">06</span>
-                        <p class="skill-card__category">Datos</p>
-                        <h3 class="skill-card__title">Power BI</h3>
-                        <p class="skill-card__level">En aprendizaje</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <span class="skill-card__number">07</span>
-                        <p class="skill-card__category">Datos</p>
-                        <h3 class="skill-card__title">Pandas</h3>
-                        <p class="skill-card__level">Intermedio</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <span class="skill-card__number">08</span>
-                        <p class="skill-card__category">Machine Learning</p>
-                        <h3 class="skill-card__title">Scikit-learn</h3>
-                        <p class="skill-card__level">Básico</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <span class="skill-card__number">09</span>
-                        <p class="skill-card__category">Herramientas</p>
-                        <h3 class="skill-card__title">Git</h3>
-                        <p class="skill-card__level">Intermedio</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <span class="skill-card__number">10</span>
-                        <p class="skill-card__category">Herramientas</p>
-                        <h3 class="skill-card__title">GitHub</h3>
-                        <p class="skill-card__level">Intermedio</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <span class="skill-card__number">11</span>
-                        <p class="skill-card__category">Herramientas</p>
-                        <h3 class="skill-card__title">VS Code</h3>
-                        <p class="skill-card__level">Intermedio</p>
-                    </article>
-
-                    <article class="skill-card">
-                        <span class="skill-card__number">12</span>
+                    <li class="skill-card">
+                        <span class="skill-card__number" aria-hidden="true">06</span>
                         <p class="skill-card__category">Backend</p>
                         <h3 class="skill-card__title">Flask</h3>
                         <p class="skill-card__level">Básico</p>
-                    </article>
+                    </li>
 
-                    <article class="skill-card">
-                        <span class="skill-card__number">13</span>
+                    <li class="skill-card">
+                        <span class="skill-card__number" aria-hidden="true">07</span>
                         <p class="skill-card__category">Backend</p>
                         <h3 class="skill-card__title">Django</h3>
                         <p class="skill-card__level">Básico</p>
-                    </article>
+                    </li>
 
-                </div>
+                    <li class="skill-card">
+                        <span class="skill-card__number" aria-hidden="true">08</span>
+                        <p class="skill-card__category">Análisis de datos</p>
+                        <h3 class="skill-card__title">Pandas</h3>
+                        <p class="skill-card__level">Intermedio</p>
+                    </li>
+
+                    <li class="skill-card">
+                        <span class="skill-card__number" aria-hidden="true">09</span>
+                        <p class="skill-card__category">Análisis de datos</p>
+                        <h3 class="skill-card__title">Scikit-learn</h3>
+                        <p class="skill-card__level">Básico</p>
+                    </li>
+
+                    <li class="skill-card">
+                        <span class="skill-card__number" aria-hidden="true">10</span>
+                        <p class="skill-card__category">Análisis de datos</p>
+                        <h3 class="skill-card__title">Power BI</h3>
+                        <p class="skill-card__level">En aprendizaje</p>
+                    </li>
+
+                    <li class="skill-card">
+                        <span class="skill-card__number" aria-hidden="true">11</span>
+                        <p class="skill-card__category">Bases de datos</p>
+                        <h3 class="skill-card__title">PostgreSQL</h3>
+                        <p class="skill-card__level">Básico</p>
+                    </li>
+
+                    <li class="skill-card">
+                        <span class="skill-card__number" aria-hidden="true">12</span>
+                        <p class="skill-card__category">Herramientas</p>
+                        <h3 class="skill-card__title">Git</h3>
+                        <p class="skill-card__level">Intermedio</p>
+                    </li>
+
+                    <li class="skill-card">
+                        <span class="skill-card__number" aria-hidden="true">13</span>
+                        <p class="skill-card__category">Herramientas</p>
+                        <h3 class="skill-card__title">GitHub</h3>
+                        <p class="skill-card__level">Intermedio</p>
+                    </li>
+
+                    <li class="skill-card">
+                        <span class="skill-card__number" aria-hidden="true">14</span>
+                        <p class="skill-card__category">Herramientas</p>
+                        <h3 class="skill-card__title">VS Code</h3>
+                        <p class="skill-card__level">Intermedio</p>
+                    </li>
+                </ul>
 
             </div>
         </section>
-        <section class="projects" id="proyectos">
 
-            <header class="projects__header">
-                <p class="section-header__eyebrow">
-                    <span>03</span>
-                    Proyectos
-                </p>
-
-                <div>
-                    <h2 class="projects__title">
-                        Ideas convertidas<br>
-                        <span>en soluciones.</span>
-                    </h2>
-
-                    <p class="projects__intro">
-                        Una selección de proyectos donde combino desarrollo,
-                        análisis de datos y tecnología para resolver problemas reales.
-                    </p>
-                </div>
-            </header>
-
-
-      
-            <article class="project">
-
-                <div class="project__number">
-                    <span>01</span>
-                    <span>/ 03</span>
-                </div>
-
-                <div class="project__content">
-
-                    <p class="project__category">
-                        DESARROLLO WEB · IA
-                    </p>
-
-                    <h3 class="project__title">
-                        AI-Powered<br>
-                        Routine Planner
-                    </h3>
-
-                    <p class="project__description">
-                        Plataforma web orientada a mejorar la organización del
-                        tiempo de estudiantes mediante planificación inteligente,
-                        seguimiento de productividad y automatización.
-                    </p>
-
-                    <ul class="project__tech">
-                        <li>Python</li>
-                        <li>Django</li>
-                        <li>JavaScript</li>
-                        <li>Git</li>
-                    </ul>
-
-                    <div class="project__contribution">
-                        <span>MI CONTRIBUCIÓN</span>
-
-                        <p>
-                            Desarrollo de interfaces de tiempo enfocado y productividad,
-                            incluyendo estructura, estilos y visualización del análisis
-                            dentro de un flujo colaborativo con Git y GitHub.
-                        </p>
-                    </div>
-
-                    <a
-                        href="https://github.com/SnayderCJ/AI-powered_routine_planner_system.git"
-                        class="project__link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Ver repositorio <span>↗</span>
-                    </a>
-
-                </div>
-
-                <figure class="project__visual">
-                    <img
-                        src="assets/images/projects/routine-planner-productivity.png"
-                        alt="Dashboard de productividad del planificador inteligente"
-                    >
-                </figure>
-
-            </article>
-
-
-            
-            <article class="project">
-
-                <div class="project__number">
-                    <span>02</span>
-                    <span>/ 03</span>
-                </div>
-
-                <div class="project__content">
-
-                    <p class="project__category">
-                        DATA SCIENCE · MACHINE LEARNING
-                    </p>
-
-                    <h3 class="project__title">
-                        Climate Change<br>
-                        K-Means Analysis
-                    </h3>
-
-                    <p class="project__description">
-                        Análisis de patrones de cambio de temperatura entre países
-                        mediante técnicas de aprendizaje no supervisado utilizando
-                        datos climáticos de FAO.
-                    </p>
-
-                    <ul class="project__tech">
-                        <li>Python</li>
-                        <li>Pandas</li>
-                        <li>Scikit-learn</li>
-                        <li>K-Means</li>
-                        <li>PCA</li>
-                    </ul>
-
-                    <div class="project__contribution">
-                        <span>RESULTADO</span>
-
-                        <p>
-                            Segmentación de países según sus patrones de cambio de
-                            temperatura, incorporando preparación de datos,
-                            selección de variables, evaluación de clusters y
-                            visualización de resultados.
-                        </p>
-                    </div>
-
-                    <a
-                        href="https://github.com/Piloso-Mayerly/climate-change-kmeans-analysis.git"
-                        class="project__link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Ver repositorio <span>↗</span>
-                    </a>
-
-                </div>
-
-                <figure class="project__visual">
-                    <img
-                        src="assets/images/projects/climate-kmeans.png"
-                        alt="Visualización del análisis climático mediante K-Means"
-                    >
-                </figure>
-
-            </article>
-
-
-         
-            <article class="project">
-
-                <div class="project__number">
-                    <span>03</span>
-                    <span>/ 03</span>
-                </div>
-
-                <div class="project__content">
-
-                    <p class="project__category">
-                        BUSINESS INTELLIGENCE · DATA ANALYTICS
-                    </p>
-
-                    <h3 class="project__title">
-                        E-commerce<br>
-                        Analytics
-                    </h3>
-
-                    <p class="project__description">
-                        Solución de Business Intelligence para analizar el desempeño
-                        de ventas mediante un modelo dimensional y dashboards
-                        interactivos orientados a la toma de decisiones.
-                    </p>
-
-                    <ul class="project__tech">
-                        <li>Power BI</li>
-                        <li>PostgreSQL</li>
-                        <li>Python</li>
-                        <li>DAX</li>
-                        <li>Power Query</li>
-                    </ul>
-
-                    <div class="project__contribution">
-                        <span>DESARROLLO</span>
-
-                        <p>
-                            Preparación y limpieza de datos, construcción de un modelo
-                            estrella en PostgreSQL, creación de medidas DAX y desarrollo
-                            de dashboards para análisis ejecutivo y evolución temporal.
-                        </p>
-                    </div>
-
-                    <a
-                        href="https://github.com/Piloso-Mayerly/ecommerce-analytics.git"
-                        class="project__link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Ver repositorio <span>↗</span>
-                    </a>
-
-                </div>
-
-                <figure class="project__visual">
-                    <img
-                        src="assets/images/projects/ecommerce-dashboard.png"
-                        alt="Dashboard ejecutivo de análisis de ventas desarrollado en Power BI"
-                    >
-                </figure>
-
-            </article>
-
-        </section>
-
-
-        <!-- DESIGN SYSTEM -->
-        <section class="design-system" id="design-system">
-            <div class="design-system__container">
+    
+        <section class="projects section" id="proyectos" aria-labelledby="projects-title">
+            <div class="container">
 
                 <header class="section-header">
-                    <p class="section-header__eyebrow">
-                        <span>04</span>
-                        Design System
-                    </p>
+                    <p class="section-header__eyebrow"><span>03</span> Proyectos</p>
 
-                    <h2 class="section-header__title">
+                    <h2 class="section-header__title" id="projects-title">
+                        Ideas convertidas
+                        <span>en soluciones.</span>
+                    </h2>
+                </header>
+
+                <p class="section-intro">
+                    Una selección de proyectos donde combino desarrollo,
+                    análisis de datos y tecnología para resolver problemas reales.
+                </p>
+
+                <div class="projects__list">
+
+                    <article class="project-card">
+                        <p class="project-card__number" aria-hidden="true">
+                            <span>01</span>
+                            <span>/ 03</span>
+                        </p>
+
+                        <div class="project-card__content">
+                            <p class="project-card__category">Desarrollo web · IA</p>
+
+                            <h3 class="project-card__title">
+                                AI-Powered
+                                <span>Routine Planner</span>
+                            </h3>
+
+                            <p class="project-card__description">
+                                Plataforma web orientada a mejorar la organización del
+                                tiempo de estudiantes mediante planificación inteligente,
+                                seguimiento de productividad y automatización.
+                            </p>
+
+                            <ul class="badge-list" aria-label="Tecnologías utilizadas">
+                                <li class="badge">Python</li>
+                                <li class="badge">Django</li>
+                                <li class="badge">JavaScript</li>
+                                <li class="badge">Git</li>
+                            </ul>
+
+                            <div class="project-card__block">
+                                <p class="project-card__label">Problema que resuelve</p>
+                                <p>
+                                    Muchos estudiantes tienen dificultades para organizar su
+                                    tiempo y mantener constancia en sus rutinas de estudio.
+                                </p>
+                            </div>
+
+                            <div class="project-card__block">
+                                <p class="project-card__label">Mi contribución</p>
+                                <p>
+                                    Desarrollo de interfaces de tiempo enfocado y productividad,
+                                    incluyendo estructura, estilos y visualización del análisis
+                                    dentro de un flujo colaborativo con Git y GitHub.
+                                </p>
+                            </div>
+
+                            <a
+                                class="link-arrow"
+                                href="https://github.com/SnayderCJ/AI-powered_routine_planner_system"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Ver repositorio de AI-Powered Routine Planner (se abre en una pestaña nueva)"
+                            >
+                                Ver repositorio <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+
+                        <figure class="project-card__visual">
+                            <img
+                                src="assets/images/projects/routine-planner-productivity.png"
+                                alt="Dashboard de productividad del planificador inteligente"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </figure>
+                    </article>
+
+                    <article class="project-card">
+                        <p class="project-card__number" aria-hidden="true">
+                            <span>02</span>
+                            <span>/ 03</span>
+                        </p>
+
+                        <div class="project-card__content">
+                            <p class="project-card__category">Data science · Machine learning</p>
+
+                            <h3 class="project-card__title">
+                                Climate Change
+                                <span>K-Means Analysis</span>
+                            </h3>
+
+                            <p class="project-card__description">
+                                Análisis de patrones de cambio de temperatura entre países
+                                mediante técnicas de aprendizaje no supervisado utilizando
+                                datos climáticos de FAO.
+                            </p>
+
+                            <ul class="badge-list" aria-label="Tecnologías utilizadas">
+                                <li class="badge">Python</li>
+                                <li class="badge">Pandas</li>
+                                <li class="badge">Scikit-learn</li>
+                                <li class="badge">K-Means</li>
+                                <li class="badge">PCA</li>
+                            </ul>
+
+                            <div class="project-card__block">
+                                <p class="project-card__label">Problema que resuelve</p>
+                                <p>
+                                    Los datos climáticos por país son extensos y difíciles de
+                                    comparar a simple vista, por lo que se necesitaba agruparlos
+                                    para identificar patrones similares.
+                                </p>
+                            </div>
+
+                            <div class="project-card__block">
+                                <p class="project-card__label">Resultado</p>
+                                <p>
+                                    Segmentación de países según sus patrones de cambio de
+                                    temperatura, incorporando preparación de datos,
+                                    selección de variables, evaluación de clusters y
+                                    visualización de resultados.
+                                </p>
+                            </div>
+
+                            <a
+                                class="link-arrow"
+                                href="https://github.com/Piloso-Mayerly/climate-change-kmeans-analysis"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Ver repositorio de Climate Change K-Means Analysis (se abre en una pestaña nueva)"
+                            >
+                                Ver repositorio <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+
+                        <figure class="project-card__visual">
+                            <img
+                                src="assets/images/projects/climate-kmeans.png"
+                                alt="Visualización del análisis climático mediante K-Means"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </figure>
+                    </article>
+
+                    <article class="project-card">
+                        <p class="project-card__number" aria-hidden="true">
+                            <span>03</span>
+                            <span>/ 03</span>
+                        </p>
+
+                        <div class="project-card__content">
+                            <p class="project-card__category">Business intelligence · Data analytics</p>
+
+                            <h3 class="project-card__title">
+                                E-commerce
+                                <span>Analytics</span>
+                            </h3>
+
+                            <p class="project-card__description">
+                                Solución de Business Intelligence para analizar el desempeño
+                                de ventas mediante un modelo dimensional y dashboards
+                                interactivos orientados a la toma de decisiones.
+                            </p>
+
+                            <ul class="badge-list" aria-label="Tecnologías utilizadas">
+                                <li class="badge">Power BI</li>
+                                <li class="badge">PostgreSQL</li>
+                                <li class="badge">Python</li>
+                                <li class="badge">DAX</li>
+                                <li class="badge">Power Query</li>
+                            </ul>
+
+                            <div class="project-card__block">
+                                <p class="project-card__label">Problema que resuelve</p>
+                                <p>
+                                    Los datos de ventas dispersos dificultan evaluar el
+                                    desempeño del negocio; se requería un modelo centralizado
+                                    y dashboards claros para decidir con información.
+                                </p>
+                            </div>
+
+                            <div class="project-card__block">
+                                <p class="project-card__label">Desarrollo</p>
+                                <p>
+                                    Preparación y limpieza de datos, construcción de un modelo
+                                    estrella en PostgreSQL, creación de medidas DAX y desarrollo
+                                    de dashboards para análisis ejecutivo y evolución temporal.
+                                </p>
+                            </div>
+
+                            <a
+                                class="link-arrow"
+                                href="https://github.com/Piloso-Mayerly/ecommerce-analytics"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Ver repositorio de E-commerce Analytics (se abre en una pestaña nueva)"
+                            >
+                                Ver repositorio <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+
+                        <figure class="project-card__visual">
+                            <img
+                                src="assets/images/projects/ecommerce-dashboard.png"
+                                alt="Dashboard ejecutivo de análisis de ventas desarrollado en Power BI"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </figure>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    
+        <section class="design-system section" id="design-system" aria-labelledby="ds-title">
+            <div class="container">
+
+                <header class="section-header">
+                    <p class="section-header__eyebrow"><span>04</span> Design System</p>
+
+                    <h2 class="section-header__title" id="ds-title">
                         Un sistema visual,
                         <span>consistente y reutilizable.</span>
                     </h2>
                 </header>
 
-                <p class="design-system__intro">
+                <p class="section-intro">
                     Esta guía reúne los estilos, decisiones visuales y componentes
-                    reutilizables que construyen la identidad de mi portafolio.
+                    reutilizables que construyen la identidad de mi portafolio. Los
+                    valores se leen directamente de las variables CSS utilizadas en el proyecto.
                 </p>
 
-
-                <!-- COLORES -->
-                <section class="design-system__group">
-
+             
+                <section class="design-system__group" aria-labelledby="ds-colors">
                     <header class="design-system__group-header">
                         <span>01</span>
-                        <h3>Colores</h3>
+                        <h3 id="ds-colors">Colores</h3>
                     </header>
 
                     <div class="design-system__colors">
-
                         <article class="color-card">
                             <div class="color-card__preview color-card__preview--primary"></div>
                             <div class="color-card__info">
                                 <span>Primary</span>
-                                <code>#FF1F2D</code>
+                                <code data-token="--color-primary">#FF1F2D</code>
                             </div>
                         </article>
 
@@ -574,7 +565,7 @@
                             <div class="color-card__preview color-card__preview--secondary"></div>
                             <div class="color-card__info">
                                 <span>Secondary</span>
-                                <code>#A3A3A3</code>
+                                <code data-token="--color-secondary">#A3A3A3</code>
                             </div>
                         </article>
 
@@ -582,7 +573,7 @@
                             <div class="color-card__preview color-card__preview--background"></div>
                             <div class="color-card__info">
                                 <span>Background</span>
-                                <code>#050505</code>
+                                <code data-token="--color-background">#050505</code>
                             </div>
                         </article>
 
@@ -590,7 +581,7 @@
                             <div class="color-card__preview color-card__preview--surface"></div>
                             <div class="color-card__info">
                                 <span>Surface</span>
-                                <code>#101010</code>
+                                <code data-token="--color-surface">#101010</code>
                             </div>
                         </article>
 
@@ -598,7 +589,7 @@
                             <div class="color-card__preview color-card__preview--surface-light"></div>
                             <div class="color-card__info">
                                 <span>Surface Light</span>
-                                <code>#181818</code>
+                                <code data-token="--color-surface-light">#181818</code>
                             </div>
                         </article>
 
@@ -606,7 +597,7 @@
                             <div class="color-card__preview color-card__preview--text"></div>
                             <div class="color-card__info">
                                 <span>Text</span>
-                                <code>#F5F5F5</code>
+                                <code data-token="--color-text">#F5F5F5</code>
                             </div>
                         </article>
 
@@ -614,7 +605,7 @@
                             <div class="color-card__preview color-card__preview--muted"></div>
                             <div class="color-card__info">
                                 <span>Text Muted</span>
-                                <code>#A3A3A3</code>
+                                <code data-token="--color-text-muted">#A3A3A3</code>
                             </div>
                         </article>
 
@@ -622,42 +613,33 @@
                             <div class="color-card__preview color-card__preview--border"></div>
                             <div class="color-card__info">
                                 <span>Border</span>
-                                <code>#292929</code>
+                                <code data-token="--color-border">#292929</code>
                             </div>
                         </article>
-
                     </div>
                 </section>
 
-
-                <section class="design-system__group">
-
+        
+                <section class="design-system__group" aria-labelledby="ds-typography">
                     <header class="design-system__group-header">
                         <span>02</span>
-                        <h3>Tipografía</h3>
+                        <h3 id="ds-typography">Tipografía</h3>
                     </header>
 
                     <div class="typography-samples">
-
                         <div class="typography-sample">
                             <span class="typography-sample__label">H1</span>
-                            <p class="typography-sample__h1">
-                                Diseño con propósito.
-                            </p>
+                            <p class="typography-sample__h1">Diseño con propósito.</p>
                         </div>
 
                         <div class="typography-sample">
                             <span class="typography-sample__label">H2</span>
-                            <p class="typography-sample__h2">
-                                Ideas convertidas en soluciones.
-                            </p>
+                            <p class="typography-sample__h2">Ideas convertidas en soluciones.</p>
                         </div>
 
                         <div class="typography-sample">
                             <span class="typography-sample__label">H3</span>
-                            <p class="typography-sample__h3">
-                                Ingeniería en Software
-                            </p>
+                            <p class="typography-sample__h3">Ingeniería en Software</p>
                         </div>
 
                         <div class="typography-sample">
@@ -677,70 +659,64 @@
 
                         <div class="typography-sample">
                             <span class="typography-sample__label">Enlace</span>
-                            <a class="project__link" href="#proyectos">
-                                Ver proyectos <span>↗</span>
+                            <a class="link-arrow" href="#proyectos">
+                                Ver proyectos <span aria-hidden="true">↗</span>
                             </a>
                         </div>
-
                     </div>
                 </section>
 
-
-                <section class="design-system__group">
-
+              
+                <section class="design-system__group" aria-labelledby="ds-spacing">
                     <header class="design-system__group-header">
                         <span>03</span>
-                        <h3>Espaciado</h3>
+                        <h3 id="ds-spacing">Espaciado</h3>
                     </header>
 
                     <div class="spacing-scale">
-
                         <div class="spacing-item">
                             <span>XS</span>
                             <div class="spacing-item__bar spacing-item__bar--xs"></div>
-                            <code>0.5rem</code>
+                            <code data-token="--space-xs">0.5rem</code>
                         </div>
 
                         <div class="spacing-item">
                             <span>SM</span>
                             <div class="spacing-item__bar spacing-item__bar--sm"></div>
-                            <code>0.75rem</code>
+                            <code data-token="--space-sm">0.75rem</code>
                         </div>
 
                         <div class="spacing-item">
                             <span>MD</span>
                             <div class="spacing-item__bar spacing-item__bar--md"></div>
-                            <code>1rem</code>
+                            <code data-token="--space-md">1rem</code>
                         </div>
 
                         <div class="spacing-item">
                             <span>LG</span>
                             <div class="spacing-item__bar spacing-item__bar--lg"></div>
-                            <code>2rem</code>
+                            <code data-token="--space-lg">2rem</code>
                         </div>
 
                         <div class="spacing-item">
                             <span>XL</span>
                             <div class="spacing-item__bar spacing-item__bar--xl"></div>
-                            <code>4rem</code>
+                            <code data-token="--space-xl">4rem</code>
                         </div>
 
                         <div class="spacing-item">
                             <span>2XL</span>
                             <div class="spacing-item__bar spacing-item__bar--2xl"></div>
-                            <code>7rem</code>
+                            <code data-token="--space-2xl">7rem</code>
                         </div>
-
                     </div>
                 </section>
 
-
-                <!-- COMPONENTES -->
-                <section class="design-system__group">
-
+               
+                <section class="design-system__group" aria-labelledby="ds-components">
                     <header class="design-system__group-header">
                         <span>04</span>
-                        <h3>Componentes</h3>
+                        <h3 id="ds-components">Componentes</h3>
                     </header>
 
                     <div class="component-showcase">
@@ -749,52 +725,117 @@
                             <p class="component-example__label">Botones</p>
 
                             <div class="component-example__content">
-                                <a class="button button--primary" href="#proyectos">
-                                    Botón primario
-                                </a>
-
-                                <a class="button button--secondary" href="#sobre-mi">
-                                    Botón secundario
-                                </a>
+                                <a class="button button--primary" href="#proyectos">Botón primario</a>
+                                <a class="button button--secondary" href="#sobre-mi">Botón secundario</a>
+                                <button
+                                    class="icon-button"
+                                    type="button"
+                                    aria-label="Ejemplo de botón circular"
+                                >→</button>
                             </div>
                         </article>
 
-
                         <article class="component-example">
-                            <p class="component-example__label">Skill / Badge</p>
+                            <p class="component-example__label">Badge</p>
 
                             <div class="component-example__content">
-                                <ul class="project__tech">
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
-                                    <li>Python</li>
+                                <ul class="badge-list" aria-label="Ejemplo de badges">
+                                    <li class="badge">HTML</li>
+                                    <li class="badge">CSS</li>
+                                    <li class="badge">JavaScript</li>
+                                    <li class="badge">Python</li>
                                 </ul>
                             </div>
                         </article>
-
 
                         <article class="component-example">
                             <p class="component-example__label">Campos de formulario</p>
 
                             <div class="component-example__content component-example__content--form">
-                                <label class="form-field">
-                                    <span>Nombre</span>
-                                    <input
-                                        type="text"
-                                        placeholder="Tu nombre"
-                                        disabled
-                                    >
-                                </label>
+                                <div class="form-field">
+                                    <label for="ds-name">Nombre</label>
+                                    <input id="ds-name" type="text" placeholder="Tu nombre">
+                                </div>
 
-                                <label class="form-field">
-                                    <span>Mensaje</span>
-                                    <textarea
-                                        rows="4"
-                                        placeholder="Escribe tu mensaje"
-                                        disabled
-                                    ></textarea>
-                                </label>
+                                <div class="form-field">
+                                    <label for="ds-email">Correo electrónico (con error)</label>
+                                    <input
+                                        id="ds-email"
+                                        type="email"
+                                        value="correo-invalido"
+                                        aria-invalid="true"
+                                        aria-describedby="ds-email-error"
+                                    >
+                                    <small class="form-field__error" id="ds-email-error">
+                                        Ingresa un correo electrónico válido.
+                                    </small>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="ds-message">Mensaje</label>
+                                    <textarea id="ds-message" rows="4" placeholder="Escribe tu mensaje"></textarea>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="component-example">
+                            <p class="component-example__label">Skill card</p>
+
+                            <ul class="component-example__content" role="list">
+                                <li class="skill-card">
+                                    <span class="skill-card__number" aria-hidden="true">01</span>
+                                    <p class="skill-card__category">Frontend</p>
+                                    <h4 class="skill-card__title">HTML</h4>
+                                    <p class="skill-card__level">Intermedio</p>
+                                </li>
+                            </ul>
+                        </article>
+
+                        <article class="component-example component-example--wide">
+                            <p class="component-example__label">Navbar</p>
+
+                            <div class="component-example__preview">
+                                <nav class="navbar" aria-label="Ejemplo de navbar">
+                                    <a class="navbar__brand" href="#inicio" aria-label="Ir al inicio">MP</a>
+
+                                    <ul class="navbar__menu">
+                                        <li><a class="navbar__link" href="#inicio">Inicio</a></li>
+                                        <li><a class="navbar__link" href="#proyectos" aria-current="location">Proyectos</a></li>
+                                        <li><a class="navbar__link" href="#contacto">Contacto</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </article>
+
+                        <article class="component-example component-example--wide">
+                            <p class="component-example__label">Card de proyecto</p>
+
+                            <div class="project-card project-card--compact">
+                                <figure class="project-card__visual">
+                                    <img
+                                        src="assets/images/projects/routine-planner-productivity.png"
+                                        alt="Dashboard de productividad del planificador inteligente"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
+                                </figure>
+
+                                <div class="project-card__content">
+                                    <p class="project-card__category">Desarrollo web · IA</p>
+                                    <h4 class="project-card__title">AI-Powered Routine Planner</h4>
+                                    <p class="project-card__description">
+                                        Plataforma web para organizar el tiempo de estudio.
+                                    </p>
+
+                                    <ul class="badge-list" aria-label="Tecnologías utilizadas">
+                                        <li class="badge">Python</li>
+                                        <li class="badge">Django</li>
+                                    </ul>
+
+                                    <a class="link-arrow" href="#proyectos">
+                                        Ver proyecto <span aria-hidden="true">↗</span>
+                                    </a>
+                                </div>
                             </div>
                         </article>
 
@@ -804,128 +845,123 @@
             </div>
         </section>
 
-        <section class="contact" id="contacto">
-            <header class="section-header">
-                <p class="section-header__eyebrow">
-                    <span>05</span>
-                    Contacto
-                </p>
+    
+        <section class="contact section" id="contacto" aria-labelledby="contact-title">
+            <div class="container">
 
-                <h2 class="section-header__title">
-                    ¿Tienes una oportunidad,<br>
-                    <span>proyecto o idea?</span>
-                </h2>
-            </header>
-            <div class="contact__content">
+                <header class="section-header">
+                    <p class="section-header__eyebrow"><span>05</span> Contacto</p>
 
-                <div class="contact__info">
+                    <h2 class="section-header__title" id="contact-title">
+                        ¿Tienes una oportunidad,
+                        <span>proyecto o idea?</span>
+                    </h2>
+                </header>
 
-                    <p class="contact__description">
-                        Estoy abierta a oportunidades de prácticas, proyectos y espacios
-                        donde pueda seguir aprendiendo y aportando.
-                    </p>
+                <div class="contact__content">
 
-                    <div class="contact__links">
-                        <a
-                            class="contact__link"
-                            href="mailto:pilosomayerli@gmail.com"
-                        >
-                            <span class="contact__link-label">Correo</span>
-                            <span class="contact__link-value">pilosomayerli@gmail.com</span>
-                            <span class="contact__link-arrow" aria-hidden="true">↗</span>
-                        </a>
+                    <div class="contact__info">
+                        <p class="contact__description">
+                            Estoy abierta a oportunidades de prácticas, proyectos y espacios
+                            donde pueda seguir aprendiendo y aportando.
+                        </p>
 
-                        <a
-                            class="contact__link"
-                            href="https://github.com/Piloso-Mayerly"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <span class="contact__link-label">GitHub</span>
-                            <span class="contact__link-value">Piloso-Mayerly</span>
-                            <span class="contact__link-arrow" aria-hidden="true">↗</span>
-                        </a>
+                        <div class="contact__links">
+                            <a class="contact__link" href="mailto:pilosomayerli@gmail.com">
+                                <span class="contact__link-label">Correo</span>
+                                <span class="contact__link-value">pilosomayerli@gmail.com</span>
+                                <span class="contact__link-arrow" aria-hidden="true">↗</span>
+                            </a>
 
-                        <a
-                            class="contact__link"
-                            href="https://www.linkedin.com/in/mayerly-piloso-mu%C3%B1oz-43b417251/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <span class="contact__link-label">LinkedIn</span>
-                            <span class="contact__link-value">Mayerly Piloso</span>
-                            <span class="contact__link-arrow" aria-hidden="true">↗</span>
-                        </a>
+                            <a
+                                class="contact__link"
+                                href="https://github.com/Piloso-Mayerly"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <span class="contact__link-label">GitHub</span>
+                                <span class="contact__link-value">Piloso-Mayerly</span>
+                                <span class="contact__link-arrow" aria-hidden="true">↗</span>
+                            </a>
+
+                            <a
+                                class="contact__link"
+                                href="https://www.linkedin.com/in/mayerly-piloso-mu%C3%B1oz-43b417251/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <span class="contact__link-label">LinkedIn</span>
+                                <span class="contact__link-value">Mayerly Piloso</span>
+                                <span class="contact__link-arrow" aria-hidden="true">↗</span>
+                            </a>
+                        </div>
                     </div>
+
+                    <form
+                        class="contact-form"
+                        id="contact-form"
+                        data-recipient="pilosomayerli@gmail.com"
+                        novalidate
+                    >
+                        <div class="form-field">
+                            <label for="contact-name">Nombre</label>
+                            <input
+                                id="contact-name"
+                                name="name"
+                                type="text"
+                                placeholder="Tu nombre"
+                                autocomplete="name"
+                                aria-describedby="name-error"
+                                required
+                            >
+                            <small class="form-field__error" id="name-error"></small>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="contact-email">Correo electrónico</label>
+                            <input
+                                id="contact-email"
+                                name="email"
+                                type="email"
+                                placeholder="tu@correo.com"
+                                autocomplete="email"
+                                aria-describedby="email-error"
+                                required
+                            >
+                            <small class="form-field__error" id="email-error"></small>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="contact-message">Mensaje</label>
+                            <textarea
+                                id="contact-message"
+                                name="message"
+                                rows="6"
+                                placeholder="Cuéntame sobre tu proyecto u oportunidad"
+                                aria-describedby="message-error"
+                                required
+                            ></textarea>
+                            <small class="form-field__error" id="message-error"></small>
+                        </div>
+
+                        <button class="button button--primary" type="submit">Enviar mensaje</button>
+
+                        <p class="contact-form__status" id="form-status" aria-live="polite"></p>
+                    </form>
 
                 </div>
-
-                <form class="contact-form" id="contact-form" novalidate>
-
-                    <div class="form-field">
-                        <label for="contact-name">Nombre</label>
-
-                        <input
-                            id="contact-name"
-                            name="name"
-                            type="text"
-                            placeholder="Tu nombre"
-                            autocomplete="name"
-                            required
-                        >
-
-                        <small class="form-field__error" id="name-error"></small>
-                    </div>
-
-                    <div class="form-field">
-                        <label for="contact-email">Correo electrónico</label>
-
-                        <input
-                            id="contact-email"
-                            name="email"
-                            type="email"
-                            placeholder="tu@correo.com"
-                            autocomplete="email"
-                            required
-                        >
-
-                        <small class="form-field__error" id="email-error"></small>
-                    </div>
-
-                    <div class="form-field">
-                        <label for="contact-message">Mensaje</label>
-
-                        <textarea
-                            id="contact-message"
-                            name="message"
-                            rows="6"
-                            placeholder="Cuéntame sobre tu proyecto u oportunidad"
-                            required
-                        ></textarea>
-
-                        <small class="form-field__error" id="message-error"></small>
-                    </div>
-
-                    <button class="button button--primary" type="submit">
-                        Enviar mensaje
-                    </button>
-
-                    <p
-                        class="contact-form__status"
-                        id="form-status"
-                        aria-live="polite"
-                    ></p>
-
-                </form>
-
             </div>
         </section>
+
     </main>
 
     <footer class="site-footer">
-        <!-- Footer -->
+        <div class="container site-footer__inner">
+            <p>© 2026 Mayerly Piloso Muñoz. Todos los derechos reservados.</p>
+            <a href="#inicio">Volver arriba ↑</a>
+        </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>

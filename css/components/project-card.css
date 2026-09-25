@@ -1,0 +1,170 @@
+
+
+.project-card {
+    display: grid;
+    grid-template-columns: 7rem minmax(300px, 0.8fr) minmax(450px, 1.3fr);
+    gap: var(--space-lg);
+    align-items: center;
+
+    padding-block: var(--space-xl);
+
+    border-top: var(--border);
+}
+
+.project-card__number {
+    align-self: start;
+
+    display: flex;
+    gap: 0.4rem;
+
+    font-size: var(--font-size-xs);
+    letter-spacing: var(--tracking-label);
+}
+
+.project-card__number span:first-child {
+    color: var(--color-primary);
+}
+
+.project-card__category {
+    margin-bottom: var(--space-md);
+
+    color: var(--color-primary);
+
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+}
+
+.project-card__title {
+    margin-bottom: var(--space-lg);
+
+    font-size: clamp(2.7rem, 4.5vw, 5rem);
+    line-height: 0.92;
+    letter-spacing: -0.05em;
+}
+
+.project-card__title span {
+    display: block;
+}
+
+.project-card__description {
+    max-width: 32rem;
+
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
+.project-card .badge-list {
+    margin-block: var(--space-lg);
+}
+
+.project-card__block {
+    max-width: 32rem;
+    margin-top: var(--space-md);
+    padding-top: var(--space-md);
+
+    border-top: var(--border);
+}
+
+.project-card__label {
+    margin-bottom: var(--space-xs);
+
+    color: var(--color-primary);
+
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-label);
+}
+
+.project-card__block p:last-child {
+    color: var(--color-text-muted);
+}
+
+.project-card .link-arrow {
+    margin-top: var(--space-lg);
+}
+
+.project-card__visual {
+    position: relative;
+    overflow: hidden;
+
+    border: var(--border);
+    border-radius: var(--radius-sm);
+}
+
+.project-card__visual::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: var(--color-primary);
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: opacity var(--transition-normal);
+}
+
+.project-card__visual:hover::after {
+    opacity: 0.08;
+}
+
+.project-card__visual img {
+    width: 100%;
+    height: auto;
+
+    transition: transform 0.5s ease;
+}
+
+.project-card__visual:hover img {
+    transform: scale(1.025);
+}
+
+/* Variante compacta */
+
+.project-card--compact {
+    max-width: 34rem;
+    padding: var(--space-lg);
+
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+
+    border: var(--border);
+    border-radius: var(--radius-sm);
+}
+
+.project-card--compact .project-card__visual {
+    order: -1;
+}
+
+.project-card--compact .project-card__title {
+    margin-bottom: var(--space-md);
+    font-size: var(--font-size-xl);
+}
+
+.project-card--compact .badge-list {
+    margin-block: var(--space-md) 0;
+}
+
+.project-card--compact .link-arrow {
+    margin-top: var(--space-md);
+}
+
+@media (max-width: 1024px) {
+    .project-card {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    /* En pantallas pequeñas: número, imagen y luego contenido */
+    .project-card__visual {
+        order: 1;
+    }
+
+    .project-card__content {
+        order: 2;
+    }
+}

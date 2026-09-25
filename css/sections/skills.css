@@ -1,0 +1,61 @@
+
+
+.skills {
+    overflow: hidden;
+}
+
+.skills__controls {
+    margin-top: var(--space-xl);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills__counter {
+    font-size: var(--font-size-sm);
+    letter-spacing: var(--tracking-label);
+
+    color: var(--color-text-muted);
+}
+
+.skills__current {
+    color: var(--color-primary);
+}
+
+.skills__buttons {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.skills__track {
+    margin-top: var(--space-md);
+
+    /* El padding evita que el hover (translateY) quede recortado por el overflow */
+    padding-block: var(--space-xs);
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(18rem, 1fr);
+    gap: var(--space-md);
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+
+    scroll-snap-type: inline mandatory;
+    scrollbar-width: none;
+}
+
+.skills__track::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .skills__controls {
+        margin-top: var(--space-lg);
+    }
+
+    .skills__track {
+        grid-auto-columns: minmax(16rem, 85%);
+    }
+}

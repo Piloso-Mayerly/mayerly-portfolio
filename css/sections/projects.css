@@ -1,0 +1,9 @@
+
+
+.projects__list {
+    margin-top: var(--space-xl);
+}
+
+.projects__list > .project-card:last-child {
+    border-bottom: var(--border);
+}

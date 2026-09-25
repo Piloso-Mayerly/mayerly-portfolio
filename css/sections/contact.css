@@ -1,0 +1,122 @@
+
+
+.contact__content {
+    margin-top: var(--space-xl);
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.8fr);
+    gap: var(--space-xl);
+    align-items: start;
+}
+
+.contact__info {
+    min-width: 0;
+}
+
+.contact__description {
+    max-width: 35rem;
+    margin-bottom: var(--space-xl);
+
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
+.contact__links {
+    border-top: var(--border);
+}
+
+.contact__link {
+    padding-block: 1.75rem;
+
+    display: grid;
+    grid-template-columns: 9rem 1fr auto;
+    align-items: center;
+    gap: var(--space-md);
+
+    border-bottom: var(--border);
+
+    transition: padding var(--transition-fast);
+}
+
+.contact__link:hover {
+    padding-left: var(--space-sm);
+}
+
+.contact__link-label {
+    color: var(--color-primary);
+
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+}
+
+.contact__link-value {
+    min-width: 0;
+
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    overflow-wrap: anywhere;
+}
+
+.contact__link-arrow {
+    font-size: 1.5rem;
+
+    transition:
+        transform var(--transition-fast),
+        color var(--transition-fast);
+}
+
+.contact__link:hover .contact__link-arrow {
+    color: var(--color-primary);
+    transform: translate(0.25rem, -0.25rem);
+}
+
+/* Formulario */
+
+.contact-form {
+    padding: var(--space-lg);
+
+    display: grid;
+    gap: var(--space-md);
+
+    background-color: var(--color-surface);
+
+    border: var(--border);
+    border-radius: var(--radius-sm);
+}
+
+.contact-form .button {
+    justify-self: start;
+}
+
+.contact-form__status {
+    min-height: 1.5rem;
+
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+}
+
+@media (max-width: 1024px) {
+    .contact__content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        padding: var(--space-md);
+    }
+
+    .contact-form .button {
+        width: 100%;
+    }
+
+    .contact__link {
+        grid-template-columns: 1fr auto;
+        gap: var(--space-sm);
+    }
+
+    .contact__link-label {
+        grid-column: 1 / -1;
+    }
+}

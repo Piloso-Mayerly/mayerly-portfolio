@@ -1,0 +1,21 @@
+
+
+.link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    transition:
+        color var(--transition-fast),
+        gap var(--transition-fast);
+}
+
+.link-arrow:hover {
+    gap: var(--space-md);
+    color: var(--color-primary);
+}

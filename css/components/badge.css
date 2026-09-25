@@ -1,0 +1,18 @@
+
+
+.badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.badge {
+    padding: var(--space-xs) var(--space-sm);
+
+    border: var(--border);
+    border-radius: var(--radius-sm);
+
+    font-size: var(--font-size-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
