@@ -31,7 +31,7 @@
 .skills__track {
     margin-top: var(--space-md);
 
-    /* El padding evita que el hover (translateY) quede recortado por el overflow */
+   
     padding-block: var(--space-xs);
 
     display: grid;

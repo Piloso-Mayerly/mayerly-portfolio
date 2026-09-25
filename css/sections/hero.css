@@ -73,7 +73,6 @@
     gap: var(--space-md);
 }
 
-/* Retrato */
 
 .hero__visual {
     position: relative;
@@ -137,7 +136,7 @@
     transform: translateX(-50%);
 }
 
-/* Indicador de scroll */
+
 
 .hero__scroll {
     position: absolute;

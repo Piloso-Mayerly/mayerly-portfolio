@@ -29,7 +29,7 @@
     letter-spacing: 0.08em;
 }
 
-/* Colores */
+
 
 .design-system__colors {
     display: grid;
@@ -175,7 +175,7 @@
 .spacing-item__bar--xl { --size: var(--space-xl); }
 .spacing-item__bar--2xl { --size: var(--space-2xl); }
 
-/* Componentes */
+
 
 .component-showcase {
     display: grid;

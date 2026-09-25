@@ -123,7 +123,7 @@
     transform: scale(1.025);
 }
 
-/* Variante compacta */
+
 
 .project-card--compact {
     max-width: 34rem;
@@ -159,7 +159,7 @@
         gap: var(--space-lg);
     }
 
-    /* En pantallas pequeñas: número, imagen y luego contenido */
+
     .project-card__visual {
         order: 1;
     }
